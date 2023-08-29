@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+{% load static %}
+
+<body>
+    {% block content %}
+    {%if detail.photo %}
+        <img src="{{detail.photo.url}}" alt="">
+    {% endif %}
+    <h2>نام غذا<h4>{{detail.name}}
+    <h3>توضیحات<h5>{{detail.description}}
+    <h3>تاریخ انتشار<h5>{{detail.published}}
+    <h3>قیمت<h4>{{detail.price}}
+    <h2> سازنده این پست<h3>{{detail.user}}
+    
+    
+    
+    {% endblock content %}
+</body>

@@ -1,0 +1,26 @@
+{% extends "base.html"%}
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+     <!-- bootstrap core css -->
+     <link
+     rel="stylesheet"
+     type="text/css"
+     href="{% static 'css/bootstrap.css' %}"
+   />
+</head>
+<body>
+  {%block content%}
+    <h4>پروفایل</h4>
+    <hr>
+    <p><b>نام کاربری</b> : <b>{{request.user.username}}</b></p>
+    <p><b> ایمیل</b> : <b>{{request.user.email}}</b></p>
+    <a href="{% url 'password_change' %}" ><button class="btn btn-success">تغییر رمز عبور</button></a>
+    <script
+      type="text/javascript"
+      src="{% static 'js/bootstrap.js' %}"
+    ></script>
+  {%endblock content%}
+</body>
+</html>

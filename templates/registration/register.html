@@ -1,0 +1,16 @@
+{% extends 'base.html' %} {% load static %}
+<!DOCTYPE html>
+<html lang="en">
+  <body>
+    {% block content %}
+    <h4>ثبت نام</h4>
+    <hr />
+    <form action="" method="POST">
+      {% csrf_token %} {{form.as_p}}
+      <b
+        ><h5><input type="submit" value="ثبت" /></h5
+      ></b>
+    </form>
+    {% endblock content %}
+  </body>
+</html>

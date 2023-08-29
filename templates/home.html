@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+{% load static %}
+<body>
+    {% block content %}
+    {%for i in foods %}
+        <a href="{% url 'detail_page' i.pk %}">
+        {% if i.photo %}
+            <img src="{{i.photo.url}}" alt="">
+        {% endif %}    
+        <h5>{{i.name}}</h5>
+    {% endfor %}    
+    
+    {% endblock content %}
+</body>
+</html>

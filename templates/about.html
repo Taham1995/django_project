@@ -1,0 +1,35 @@
+{% extends 'base.html' %}
+{% load static %}
+
+<body>
+    {% block content %}
+    <!-- about section -->
+
+    <section class="about_section layout_padding">
+        <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-6 px-0">
+              <div class="img-box">
+                <img src="{{detail.photo.url}}" alt="" />
+              </div>
+            </div>
+            <div class="col-md-5">
+              <div class="detail-box">
+                <div class="heading_container">
+                  <hr />
+                  <h2>{{detail.name}}</h2>
+                </div>
+                <h5><p>{{detail.description}}</p><h4>
+                <h5><p>قیمت :   {{detail.price}}</p><h5>
+                <a href="{% url 'home_page'%}"> خرید </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+  
+      <!-- end about section -->
+
+
+    {% endblock content %}
+</body>
